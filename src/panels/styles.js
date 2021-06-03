@@ -15,6 +15,7 @@ export default {
     paddingBottom: 12,
     paddingTop: 2,
     paddingLeft: 10,
+    paddingRight: 10,
     border: '0px solid #d3d3d3',
     marginBottom: 5,
     border: '1px solid #000',
@@ -33,7 +34,7 @@ export default {
   },
   panelTitle: {
     float: 'left',
-    width: 60,
+    width: 70,
     padding: 3,
     color: '#000'
   },
