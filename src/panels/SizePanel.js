@@ -35,7 +35,7 @@ export default class SizePanel extends Panel {
           <Column label="angle" value={object.rotate}
                   onChange={this.props.onChange.bind(this, 'rotate')} />
         </Columns>}
-        <Columns label="Delete">
+        <Columns label="">
           <button onClick={this.props.onDelete}>Delete Shape</button>
         </Columns>
       </PropertyGroup>
