@@ -17,7 +17,7 @@ class InsertMenu extends Component {
               ]}
                 onMouseDown={this.props.onSelect.bind(this, type)}
                 key={i}>
-              {tools[type].meta.icon} <br />{type}
+              {tools[type].meta.icon} {type}
             </li>
           ))}
         </ul>
@@ -31,11 +31,13 @@ const styles = {
     font: "inherit",
     position: 'absolute',
     marginTop: 0,
-    marginLeft: -90,
+    marginLeft: -120,
     height: 'auto',
-    width: 90,
+    width: 120,
     cursor: "pointer",
-    textTransform: "capitalize"
+    textTransform: "capitalize",
+    display: 'flex',
+    alignItems: 'center'
   },
   toolBox: {
     margin: 0,
