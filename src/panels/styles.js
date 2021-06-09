@@ -7,7 +7,7 @@ export default {
     padding: '0 5px 6px 5px',
     fontFamily: '"inherit',
     fontSize: 'inherit',
-    zIndex: 1000
+    zIndex: 98
   },
   propertyGroup: {
     backgroundColor: '#fff',
