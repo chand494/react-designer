@@ -561,6 +561,7 @@ class Designer extends Component {
 
           {showPropertyPanel && (
             <PanelList
+              position={this.props.panelPosition ? this.props.panelPosition : 'right'}
               offset={this.getOffset()}
               object={objectWithInitial}
               onArrange={this.handleArrange.bind(this)}

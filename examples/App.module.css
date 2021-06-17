@@ -35,10 +35,10 @@
 }
 
 .preview {
-	float: left;
+	/* float: left; */
 	margin-left: 100px;
 	margin-top: 20px;
-	margin-bottom: 110px;
+	/* margin-bottom: 110px; */
 }
 
 .container {

@@ -13,7 +13,7 @@ class PanelList extends Component {
     };
     return (
       <Portal closeOnEsc closeOnOutsideClick isOpened={true}>
-        <div style={[styles.propertyPanel, style]}>
+        <div style={[this.props.position === "bottom" ? styles.propertyPanelBottom : styles.propertyPanel, style]}>
           {objectComponent.panels.map((Panel, i) => <Panel key={i} {...this.props} />)}
           <div className="additionalinfo"></div>
         </div>

@@ -9,6 +9,15 @@ export default {
     fontSize: 'inherit',
     zIndex: 98
   },
+  propertyPanelBottom: {
+    padding: '10px 5px 6px 5px',
+    fontFamily: '"inherit',
+    fontSize: 'inherit',
+    zIndex: 98,
+    display: 'flex',
+    alignItems: 'stretch',
+    justifyContent: 'center'
+  },
   propertyGroup: {
     backgroundColor: '#fff',
     overflow: 'hidden',
