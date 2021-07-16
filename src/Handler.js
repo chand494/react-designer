@@ -74,27 +74,27 @@ class Handler extends Component {
 const styles = {
   handler: {
     'position': 'absolute',
-    'border': '2px solid #dedede',
+    'border': '2px solid #08FF09',
     'zIndex': 999999
   },
   anchor: {
     'width': 10,
     'height': 10,
     ':hover': {
-      'borderColor': 'gray'
+      'borderColor': '#09e509'
     }
   },
   scaleAnchor: {
     'marginTop': -3,
-    'borderRight': '2px solid #dedede',
-    'borderBottom': '2px solid #dedede',
+    'borderRight': '2px solid #08FF09',
+    'borderBottom': '2px solid #08FF09',
     'position': 'absolute',
     'zIndex': -1
   },
   rotateAnchor: {
     'marginTop': -8,
-    'borderRight': '2px solid #dedede',
-    'borderTop': '2px solid #dedede',
+    'borderRight': '2px solid #08FF09',
+    'borderTop': '2px solid #08FF09',
     'position': 'absolute',
     'borderTopRightRadius': 3,
     'zIndex': -1
