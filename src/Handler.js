@@ -44,10 +44,10 @@ class Handler extends Component {
 
   render() {
     let {props} = this;
-    let {boundingBox} = props;
+    let {boundingBox, isPreview} = props;
 
     let handlerStyle = {
-      ...styles.handler,
+      ...(!isPreview && styles.handler),
       ...boundingBox,
       left: boundingBox.left - 2,
       top: boundingBox.top - 2,
@@ -59,6 +59,7 @@ class Handler extends Component {
         style={handlerStyle}
         onMouseLeave={props.onMouseLeave}
         onDoubleClick={props.onDoubleClick}
+        onClick={props.onClick}
         onMouseDown={this.onMouseDown.bind(this)}>
           {props.canRotate &&
             <RotateAnchor onMouseDown={props.onRotate}

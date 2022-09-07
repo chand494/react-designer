@@ -21,6 +21,7 @@ class Designer extends Component {
     },
     snapToGrid: 1,
     svgStyle: {},
+    isPreview:false,
     insertMenu: InsertMenu
   };
 
@@ -242,6 +243,16 @@ class Designer extends Component {
 
     return this.snapCoordinates(coords);
   }
+
+  onItemClick(event) {
+    let {currentObjectIndex} = this.state;
+    let {objects} = this.props;
+    let object = objects[currentObjectIndex];
+    if(this.props.onObjectSelect){
+      this.props.onObjectSelect(object)
+    }
+  }
+
 
   onDrag(event) {
     let {currentObjectIndex, startPoint, mode} = this.state;
@@ -527,8 +538,10 @@ class Designer extends Component {
                 width: canvasWidth,
                 height: canvasHeight
              }}
-             onMouseMove={this.onDrag.bind(this)}
-             onMouseUp={this.stopDrag.bind(this)}>
+              onMouseMove={!this.props.isPreview?this.onDrag.bind(this):()=>{}}
+              onMouseUp={!this.props.isPreview?this.stopDrag.bind(this):()=>{}}
+              onClick={this.props.isPreview?this.onItemClick.bind(this):()=>{}}
+             >
 
           {isEditMode && ObjectEditor && (
              <ObjectEditor object={currentObject}
@@ -559,7 +572,7 @@ class Designer extends Component {
 
           {this.renderSVG()}
 
-          {showPropertyPanel && (
+          {!this.props.isPreview && showPropertyPanel && (
             <PanelList
               position={this.props.panelPosition ? this.props.panelPosition : 'right'}
               offset={this.getOffset()}
