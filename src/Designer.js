@@ -560,11 +560,13 @@ class Designer extends Component {
               canRotate={_(currentObject).has('rotate')}
               onMouseLeave={this.hideHandler.bind(this)}
               onDoubleClick={this.showEditor.bind(this)}
+              isPreview={this.props.isPreview}
+              onClick={this.startDrag.bind(this,mode.FREE)}
               onDrag={this.startDrag.bind(this, modes.DRAG)}
               onResize={this.startDrag.bind(this, modes.SCALE)}
               onRotate={this.startDrag.bind(this, modes.ROTATE)} /> )}
 
-          {InsertMenuComponent && (
+          {!this.props.isPreview && InsertMenuComponent && (
             <InsertMenuComponent tools={objectTypes}
               currentTool={selectedTool}
               onSelect={this.selectTool.bind(this)} />

@@ -47,7 +47,7 @@ class Handler extends Component {
     let {boundingBox, isPreview} = props;
 
     let handlerStyle = {
-      ...(!isPreview && styles.handler),
+      ...styles.handler,
       ...boundingBox,
       left: boundingBox.left - 2,
       top: boundingBox.top - 2,
